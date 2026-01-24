@@ -1,16 +1,16 @@
 import { useRef } from 'react'
-import zenithlogo from './assets/Zenith.png'
-import astro1 from './assets/astro1.jpg'
-import astro2 from './assets/astro2.jpg'
-import astro3 from './assets/astro3.jpg'
-import astro4 from './assets/astro4.jpg'
-import astro5 from './assets/astro5.jpg'
-import astro6 from './assets/astro6.jpg'
-import astro7 from './assets/astro7.jpg'
-import astro8v1 from './assets/astro8v1.jpg'
-import astro8v2 from './assets/astro8v2.jpg'
-import astro9 from './assets/astro9.png'
-import Logo from './assets/AstromagLogoWB.png'
+import zenithlogo from '../assets/Zenith.png'
+import astro1 from '../assets/astro1.jpg'
+import astro2 from '../assets/astro2.jpg'
+import astro3 from '../assets/astro3.jpg'
+import astro4 from '../assets/astro4.jpg'
+import astro5 from '../assets/astro5.jpg'
+import astro6 from '../assets/astro6.jpg'
+import astro7 from '../assets/astro7.jpg'
+import astro8v1 from '../assets/astro8v1.jpg'
+import astro8v2 from '../assets/astro8v2.jpg'
+import astro9 from '../assets/astro9.png'
+import Logo from '../assets/AstromagLogoWB.png'
 
 import './App.css'
 
@@ -196,6 +196,16 @@ function App() {
           </div>
           </div>
         </div>
+      </div>
+    </>
+  )
+}
+
+export function Contact() {
+  return(
+    <>
+      <div className="footer">
+        
       </div>
     </>
   )
