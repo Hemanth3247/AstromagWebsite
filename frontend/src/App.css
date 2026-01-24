@@ -15,6 +15,9 @@ html, body {
   font-size: medium ;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
 a:visited, a:hover, a:active {
   color: white;
   text-decoration: none;
@@ -39,7 +42,7 @@ a:hover {
   font-family: Tektur, sans-serif;
   align-items: center;
   height: 90vh;
-  padding-top: 3vh;
+  padding-top: 0;
   background-image: url('./assets/Spaceimage3.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -59,22 +62,25 @@ a:hover {
 
 .contentlogo {
 
-  max-width: 40vh;
+  max-width: 70vh;
+  max-height: 40vh;
   align-items: center;
+  object-fit: cover;
+  color: white;
+  margin-top: 4vh;
   flex: 0.8;
-  
+  opacity: 0.8;
 }
 
-h1 {
+.introhead {
   padding: 0;
   margin: 0;
   text-align: center;
-  padding-top: 10px;
   font-weight: 400;
   font-size: 45px;
 }
 
-h2 {
+.intropara {
   padding: 0%;
   margin: 0%;
   width: 60%;
@@ -108,13 +114,19 @@ h1, h2 {
 }
 
 .astromagLogo {
-  margin-left: 2%;
   height: 8vh;
   object-fit: contain;
-  margin-top: 5px;
+  margin-top: 0;
   flex: 1;
   align-items: center;
   justify-content: left;
+}
+.toplogo {
+  width: 40vh;
+  position: relative;
+  top: -40px;
+  left: -30px;
+  object-fit: contain;
 }
 
 .navBar {
@@ -131,7 +143,7 @@ h1, h2 {
 .start {
   flex: 0.2;
   width: 160px;
-  height: 80px;
+  min-height: 45px;
   margin-bottom: 100px;
   border-radius: 8px;
   border: none;
@@ -154,17 +166,97 @@ h1, h2 {
 .Content {
   position: static;
   background-color: black;
-  height: 187vh;
+  height: 190vh;
   
 }
 
 .magpage {
   width: 100%;
-  height: 100vh;
-  background-image: url(./assets/Spaceimage2.jpg);
+  height: 103vh;
+  background-image: url("./assets/Spaceimage1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  overflow-x: auto;
+}
+
+.magazines {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  animation: spin 10s infinite linear;
+}
+.magcard {
+  display: flex;
+  flex-direction: row;
+  border: none;
+  border-radius: 10px;
+  width: 90vh;
+  height: 55vh;
+  justify-content: center;
+  position: relative;
+  top: 50vh;
+  left: 50vw;
+  translate: -50% -50%;
+}
+.magcard:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+  box-shadow: 0 0 10px black;
+}
+
+.magimg {
+  width: 40vh;
+  height: 55vh;
+  border-radius: 10px 0 0 10px;
+}
+
+.magdet {
+  flex: 1;
+  min-width: 50vh;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  background-color: #010d25;
+  opacity: 0.9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.astrodet {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  justify-content: start;
+  text-align:left;
+  padding-left: 50px;
+}
+
+.details {
+  font-Size:25px;
+  text-Decoration: underline;
+  margin-bottom: 5px;
+  margin-top:0;
+  font-family: Tomorrow,sans-serif;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: Tomorrow, sans-serif;
+}
+
+.title {
+  font-family: Orbitron;
+  font-size: 40px;
+  flex: 1;
+  text-align: center;
+  height: 10%;
+  padding-right: 40px;
+  padding-top: 15%;
 }
 
 .ftcopy {
@@ -174,7 +266,8 @@ h1, h2 {
   background-color: black;
   width: 100%;
   height: 50px;
+  padding-top: 25px;
   text-align: center;
-  padding-top: 4px;  
   font-size: medium;
 }
+
