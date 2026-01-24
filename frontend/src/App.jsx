@@ -1,33 +1,60 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+// import { useState } from 'react'
+import zenithlogo from './assets/Zenith.png'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export function NavBar() {
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="header">
+        <div  className="astromagLogo"> 
+          <img style={{height: "7vh"}} src={zenithlogo}/>
+        </div>
+        <nav style={{flex: 0.7}}>
+          <div className="navBar">
+            <a href="/">Home</a>
+            <a>Magazines</a>
+            <a>Articles</a>
+            <a target="_blank" href="https://iitrpr.ac.in/bost/zenith">About us</a>
+            <a>Contact</a>
+          </div>
+        </nav>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+    </>
+  )
+}
+
+function App() {
+  return(
+    <>
+      <div className="Content">
+        <div className="intropage">
+          <img className="contentlogo" src={zenithlogo} />
+          <div className="introduction">
+            <h1>
+              Welcome to Astromag
+            </h1>
+            <h2>
+            A platform by the Zenith Club of IIT Ropar dedicated 
+            to space technology, astronomy, and astrophysics, featuring 
+            magazines, articles, and explorations that reflect curiosity, research, and 
+            student perspectives on the universe.
+            </h2>
+          </div>
+          <button className='start'>Get Started</button>
+        </div>
+        <div className="magpage">
+
+        </div>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    </>
+  )
+}
+
+export function Footer() {
+  return(
+    <>
+      <div className="ftcopy"><p> © 2026 Zenith. All rights reserved </p></div>
+      
     </>
   )
 }
