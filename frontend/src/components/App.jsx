@@ -1,37 +1,12 @@
 import { useRef } from 'react'
-import zenithlogo from '../assets/Zenith.png'
-import astro1 from '../assets/astro1.jpg'
-import astro2 from '../assets/astro2.jpg'
-import astro3 from '../assets/astro3.jpg'
-import astro4 from '../assets/astro4.jpg'
-import astro5 from '../assets/astro5.jpg'
-import astro6 from '../assets/astro6.jpg'
-import astro7 from '../assets/astro7.jpg'
-import astro8v1 from '../assets/astro8v1.jpg'
-import astro8v2 from '../assets/astro8v2.jpg'
-import astro9 from '../assets/astro9.png'
-import Logo from '../assets/AstromagLogoWB.png'
-
+import { magazines, logo, socialmedia } from '../assets/images.js'
 import './App.css'
 
 
 export function NavBar() {
   return (
     <>
-      <div className="header">
-        <div  className="astromagLogo"> 
-          <img className="toplogo" src={Logo}/>
-        </div>
-        <nav style={{flex: 0.7}}>
-          <div className="navBar">
-            <a href="/">Home</a>
-            <a>Magazines</a>
-            <a>Articles</a>
-            <a target="_blank" href="https://iitrpr.ac.in/bost/zenith">About us</a>
-            <a>Contact</a>
-          </div>
-        </nav>
-      </div>
+      
     </>
   )
 }
@@ -44,11 +19,32 @@ function App() {
   });
   };
 
+  const contactRef = useRef(null); 
+  const getContact = () => {
+  contactRef.current.scrollIntoView({
+    behavior:"smooth"
+  });
+  };
+
   return(
     <>
+      <div className="header">
+        <div  className="astromagLogo"> 
+          <img  className="toplogo" src={logo[1]}/>
+        </div>
+        <nav style={{flex: 0.7}}>
+          <div className="navBar">
+            <a href="/">Home</a>
+            <a>Magazines</a>
+            <a>Articles</a>
+            <a target="_blank" href="https://iitrpr.ac.in/bost/zenith">About</a>
+            <a onClick={getContact} >Contact</a>
+          </div>
+        </nav>
+      </div>
       <div className="Content">
         <div className="intropage">
-          <img className="contentlogo" src={zenithlogo} />
+          <img className="contentlogo" src={logo[0] } />
           <div className="introduction">
             <h1 className='introhead'>
               Welcome to Astromag
@@ -64,11 +60,16 @@ function App() {
         </div>
         <div ref={sectionRef} className="magpage">
           <div className="magazines">
+            <div className="arrow">
+              <button>
+                
+              </button>
+            </div>
             <div className="magcard">
-              <img className='magimg' src={astro1} />
+              <img className='magimg' src={magazines[0]} />
               <div className="magdet">
                 <h1>Astromag 1</h1>
-                <div className='astrodet'>
+                <div className='astrodet'>  
                   <p className='details'>Details</p>
                   <p>Published on: 2021</p>
                   <p>Topic: Secret's of Space</p>  
@@ -78,7 +79,7 @@ function App() {
               </div>
             </div>
             <div className="magcard">
-              <img className='magimg' src={astro2} />
+              <img className='magimg' src={magazines[1]} />
               <div className="magdet">
                 <h1>Astromag 2</h1>
                 <div className='astrodet'>
@@ -91,7 +92,7 @@ function App() {
               </div>
             </div>
             <div className="magcard">
-              <img className='magimg' src={astro3} />
+              <img className='magimg' src={magazines[2]} />
               <div className="magdet">
                 <h1>Astromag 3</h1>
                 <div className='astrodet'>
@@ -104,7 +105,7 @@ function App() {
               </div>
             </div>
             <div className="magcard">
-              <img className='magimg' src={astro4} />
+              <img className='magimg' src={magazines[3]} />
               <div className="magdet">
                 <h1>Astromag 4</h1>
                 <div className='astrodet'>
@@ -117,7 +118,7 @@ function App() {
               </div>
             </div>
             <div className="magcard">
-              <img className='magimg' src={astro5} />
+              <img className='magimg' src={magazines[4]} />
               <div className="magdet">
                 <h1>Astromag 5</h1>
                 <div className='astrodet'>
@@ -130,7 +131,7 @@ function App() {
               </div>
             </div>
             <div className="magcard">
-              <img className='magimg' src={astro6} />
+              <img className='magimg' src={magazines[5]} />
               <div className="magdet">
                 <h1>Astromag 6</h1>
                 <div className='astrodet'>
@@ -143,7 +144,7 @@ function App() {
               </div>
             </div>
           <div className="magcard">
-            <img className='magimg' src={astro7} />
+            <img className='magimg' src={magazines[6]} />
             <div className="magdet">
               <h1>Astromag 7</h1>
               <div className='astrodet'>
@@ -156,7 +157,7 @@ function App() {
             </div>
           </div>
           <div className="magcard">
-            <img className='magimg' src={astro8v1} />
+            <img className='magimg' src={magazines[7]} />
             <div className="magdet">
               <h1>Astromag 8 Vol 1</h1>
               <div className='astrodet'>
@@ -169,7 +170,7 @@ function App() {
             </div>
           </div>
           <div className="magcard">
-            <img className='magimg' src={astro8v2} />
+            <img className='magimg' src={magazines[8]} />
             <div className="magdet">
               <h1>Astromag 8 Vol 2</h1>
               <div className='astrodet'>
@@ -182,8 +183,8 @@ function App() {
             </div>
           </div>
           <div className="magcard">
-            <img className='magimg' src={astro9} />
-            <div   style={{marginRight:'2vh'}}  className="magdet">
+            <img className='magimg' src={magazines[9]} />
+            <div  className="magdet">
               <h1>Astromag 9</h1>
               <div className='astrodet'>
                 <p className='details'>Details</p>
@@ -197,16 +198,42 @@ function App() {
           </div>
         </div>
       </div>
+      <div className="footer">
+        <div className="foothead">
+          <div ref={contactRef} className="contact">
+            <div><p style={{minHeight: '14vh'}}>Contact Us</p></div>
+            <div className="mail">
+              <p>For any queries contact us at:</p>
+              <div className="mailid">
+                <img src={socialmedia[0]} style={{width:'4vh'}} />
+                <a href="mailto:zenithclub@iitrpr.ac.in" className='maillink'>zenithclub@iitrpr.ac.in</a>
+              </div>
+            </div>
+          </div>
+          <div className='follow'>
+            <p>Follow Us</p>
+            <div className="socials">
+              <div><a target="_blank" href="https://www.instagram.com/zenith_iit_ropar/"><img style={{width:'7vh'}} src={socialmedia[1]} /></a></div>
+              <div><a target="_blank" href="https://www.linkedin.com/company/zenith-iit-ropar/"><img style={{width:'7vh'}} src={socialmedia[2]} /></a></div>
+              <div><a target="_blank" href="https://www.youtube.com/@Zenith_club" ><img style={{width:'9vh'}} src={socialmedia[3]} /></a></div>
+            </div>
+          </div>
+          <div>
+          </div>
+        </div>
+      </div>
+      <div className="ftcopy"><p> © 2026 Zenith. All rights reserved </p></div>
     </>
   )
 }
 
+
+
 export function Contact() {
+
   return(
     <>
-      <div className="footer">
-        
-      </div>
+      
     </>
   )
 }
@@ -214,7 +241,6 @@ export function Contact() {
 export function Footer() {
   return(
     <>
-      <div className="ftcopy"><p> © 2026 Zenith. All rights reserved </p></div>
 
     </>
   )
