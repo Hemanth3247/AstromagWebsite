@@ -1,5 +1,7 @@
-import { useRef } from 'react'
-import { magazines, logo, socialmedia } from '../assets/images.js'
+import { useRef, useState } from 'react'
+import { magazines, logo, socialmedia, arrow } from '../assets/images.js'
+import { magazinecard } from './magazine.js'
+import MagCard from './magazinecard.jsx'
 import './App.css'
 
 
@@ -26,8 +28,24 @@ function App() {
   });
   };
 
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const containerRef = useRef(null);
+  const SCROLL = 650;
+
+  const handScroll = (scrolled) => {
+    if (scrollPosition + scrolled < 0 || scrollPosition + scrolled > containerRef.current.scrollWidth + 500 - containerRef.current.clientWidth) {
+      return;
+    }
+    const newScrollPosition = scrollPosition + scrolled;
+
+    setScrollPosition(newScrollPosition);
+
+    containerRef.current.scrollTo({left: newScrollPosition, behavior: 'smooth'});
+  }
+
   return(
     <>
+
       <div className="header">
         <div  className="astromagLogo"> 
           <img  className="toplogo" src={logo[1]}/>
@@ -35,13 +53,16 @@ function App() {
         <nav style={{flex: 0.7}}>
           <div className="navBar">
             <a href="/">Home</a>
-            <a>Magazines</a>
+            <a onClick={handleGetStarted}>Magazines</a>
             <a>Articles</a>
             <a target="_blank" href="https://iitrpr.ac.in/bost/zenith">About</a>
             <a onClick={getContact} >Contact</a>
           </div>
         </nav>
       </div>
+
+
+
       <div className="Content">
         <div className="intropage">
           <img className="contentlogo" src={logo[0] } />
@@ -58,143 +79,30 @@ function App() {
           </div>
           <button onClick={handleGetStarted} className='start'>Get Started</button>
         </div>
-        <div ref={sectionRef} className="magpage">
-          <div className="magazines">
-            <div className="arrow">
-              <button>
-                
-              </button>
-            </div>
-            <div className="magcard">
-              <img className='magimg' src={magazines[0]} />
-              <div className="magdet">
-                <h1>Astromag 1</h1>
-                <div className='astrodet'>  
-                  <p className='details'>Details</p>
-                  <p>Published on: 2021</p>
-                  <p>Topic: Secret's of Space</p>  
-                  <p className='title'>Space Exploration</p>
-                </div>
-                <p style={{marginBottom: '20px', fontFamily:'Tektur'}}>Tap to view</p>
-              </div>
-            </div>
-            <div className="magcard">
-              <img className='magimg' src={magazines[1]} />
-              <div className="magdet">
-                <h1>Astromag 2</h1>
-                <div className='astrodet'>
-                  <p className='details'>Details</p>
-                  <p>Published on: 2022</p>
-                  <p>Topic: Cosmic Contradictions</p>  
-                  <p className='title'>Paradoxes</p>
-                </div>
-                <p style={{marginBottom: '20px', fontFamily:'Tektur'}}>Tap to view</p>
-              </div>
-            </div>
-            <div className="magcard">
-              <img className='magimg' src={magazines[2]} />
-              <div className="magdet">
-                <h1>Astromag 3</h1>
-                <div className='astrodet'>
-                  <p className='details'>Details</p>
-                  <p>Published on: 2023</p>
-                  <p>Topic: The Big Bang THeory</p>  
-                  <p className='title'>Origin of Universe</p>
-                </div>
-                <p style={{marginBottom: '20px', fontFamily:'Tektur'}}>Tap to view</p>
-              </div>
-            </div>
-            <div className="magcard">
-              <img className='magimg' src={magazines[3]} />
-              <div className="magdet">
-                <h1>Astromag 4</h1>
-                <div className='astrodet'>
-                  <p className='details'>Details</p>
-                  <p>Published on: 2023</p>
-                  <p>Topic: Infinity</p>  
-                  <p className='title'>Time Travel</p>
-                </div>
-                <p style={{marginBottom: '20px', fontFamily:'Tektur'}}>Tap to view</p>
-              </div>
-            </div>
-            <div className="magcard">
-              <img className='magimg' src={magazines[4]} />
-              <div className="magdet">
-                <h1>Astromag 5</h1>
-                <div className='astrodet'>
-                  <p className='details'>Details</p>
-                  <p>Published on: 2024</p>
-                  <p>Topic: Singularity</p>  
-                  <p className='title'>Black Holes</p>
-                </div>
-                <p style={{marginBottom: '20px', fontFamily:'Tektur'}}>Tap to view</p>
-              </div>
-            </div>
-            <div className="magcard">
-              <img className='magimg' src={magazines[5]} />
-              <div className="magdet">
-                <h1>Astromag 6</h1>
-                <div className='astrodet'>
-                  <p className='details'>Details</p>
-                  <p>Published on: 2024</p>
-                  <p>Topic: Star Life</p>  
-                  <p className='title'>Life of Stars</p>
-                </div>
-                <p style={{marginBottom: '20px', fontFamily:'Tektur'}}>Tap to view</p>
-              </div>
-            </div>
-          <div className="magcard">
-            <img className='magimg' src={magazines[6]} />
-            <div className="magdet">
-              <h1>Astromag 7</h1>
-              <div className='astrodet'>
-                <p className='details'>Details</p>
-                <p>Published on: 2025</p>
-                <p>Topic: Alien Life</p>  
-                <p className='title'>Alien Worlds</p>
-              </div>
-                <p style={{marginBottom: '20px', fontFamily:'Tektur'}}>Tap to view</p>
-            </div>
+
+
+
+        <div ref={containerRef} className="magpage">
+          <div className="arrow">
+            <button onClick={()=>{handScroll(-SCROLL)}}  className="leftarrow" style={{backgroundColor:'none'}}>
+              <img style={{width:"5vh", objectFit:"contain"}} src={arrow[0]} />
+            </button>
+            <button  onClick={()=>{handScroll(SCROLL)}} className="rightarrow" style={{backgroundColor:'none'}}>
+              <img  style={{width:"5vh", objectFit:"contain"}} src={arrow[1]} />
+            </button>
           </div>
-          <div className="magcard">
-            <img className='magimg' src={magazines[7]} />
-            <div className="magdet">
-              <h1>Astromag 8 Vol 1</h1>
-              <div className='astrodet'>
-                <p className='details'>Details</p>
-                <p>Published on: 2025</p>
-                <p>Topic: Space Tech</p>  
-                <p className='title'>Technauts</p>
-              </div>
-                <p style={{marginBottom: '20px', fontFamily:'Tektur'}}>Tap to view</p>
-            </div>
-          </div>
-          <div className="magcard">
-            <img className='magimg' src={magazines[8]} />
-            <div className="magdet">
-              <h1>Astromag 8 Vol 2</h1>
-              <div className='astrodet'>
-                <p className='details'>Details</p>
-                <p>Published on: 2026</p>
-                <p>Topic: Space Tech</p>  
-                <p className='title'>Technauts</p>
-              </div>
-                <p style={{marginBottom: '20px', fontFamily:'Tektur'}}>Tap to view</p>
-            </div>
-          </div>
-          <div className="magcard">
-            <img className='magimg' src={magazines[9]} />
-            <div  className="magdet">
-              <h1>Astromag 9</h1>
-              <div className='astrodet'>
-                <p className='details'>Details</p>
-                <p>Published on: 2026</p>
-                <p>Topic: Coming Soon</p>  
-                <p className='title'>Coming Soon</p>
-              </div>
-                <p style={{marginBottom: '20px', fontFamily:'Tektur'}}>Tap to view</p>
-            </div>
-          </div>
+          <div ref={ sectionRef }  className="magazines">
+
+            {magazinecard.map((item) => (
+              <MagCard
+                magazineno = {magazines[item.magazineno]}
+                astromagno = {item.AstromagNo}
+                date = {item.Date}
+                topic = {item.Topic}
+                title = {item.title} />
+            )
+            )};
+
           </div>
         </div>
       </div>

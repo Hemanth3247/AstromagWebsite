@@ -14,9 +14,14 @@ import mail from '../assets/mail.svg'
 import instagram from '../assets/instagram.jpg'
 import youtube from '../assets/youtube.png'
 import linkedin from '../assets/linkedin.png'
+import leftarrow from '../assets/leftarrow.svg'
+import rightarrow from '../assets/rightarrow.svg'
+
 
 export const magazines = [ astro1, astro2, astro3, astro4, astro5, astro6, astro7, astro8v1, astro8v2, astro9 ]
 
 export const logo = [ zenithlogo, astromaglogo ]
 
 export const socialmedia = [ mail, instagram, linkedin, youtube ]
+
+export const arrow = [ leftarrow, rightarrow ]

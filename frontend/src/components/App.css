@@ -176,18 +176,51 @@ h1, h2 {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  overflow-x: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 .magpage::-webkit-scrollbar {
   display: none;
 }
 
+.leftarrow, .rightarrow {
+  padding: 0;
+  opacity: 0.5;
+  border: 1px rgb(55, 55, 255) solid;
+  box-shadow: 0 0 8px rgb(43, 128, 255);
+  z-index: 1;
+  border-radius: 5px;
+  width: 45px;
+  height: 45px;
+  background-color: rgb(0, 37, 77);
+}
+
+.leftarrow {
+  position: absolute;
+  top: 150vh;
+  left: 3vh;
+}
+
+.rightarrow {
+  position: absolute;
+  top: 150vh;
+  right: 3vh;
+}
+
+.leftarrow:hover, .rightarrow:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  box-shadow: 0 0  15px rgb(43, 128, 255);
+  transition: all 0.3s ease-out;
+}
+
 .magazines {
   display: flex;
   flex-direction: row;
-  gap: 8vh;
-  animation: spin 15s infinite linear;
+  width: max-content;
+  gap: 40px;
+  padding-right: 100vh;
 }
 .magcard {
   display: flex;
@@ -198,8 +231,8 @@ h1, h2 {
   height: 55vh;
   position: relative;
   top: 50vh;
-  left: 8vh;
-  translate: 0 -50%;
+  left: 50vw;
+  translate: -50% -50%;
 }
 .magcard:hover {
   transform: scale(1.1);
@@ -266,7 +299,7 @@ p {
   background-position: center;
   background-size: cover;
   margin: 0;
-  min-height: 45vh;
+  min-height: 80vh;
   font-weight: 500;
   font-size: 35px;
   text-align: center;
@@ -280,6 +313,7 @@ p {
   height: 40vh;
   margin-left: 10vw;
   margin-right: 10vw;
+  align-items: end;
 }
 
 .foothead p {
@@ -291,6 +325,7 @@ p {
   display: flex;
   flex-direction: column;
   margin-right: 30vw;
+  vertical-align: bottom;
 }
 
 .mail p,.maillink {
@@ -305,7 +340,7 @@ p {
   display: flex;
   flex-direction: row;
   gap: 0;
-  margin-top: 2vh;
+  margin-top: 1vh;
   padding-left: 1vw;
 }
 
@@ -330,7 +365,7 @@ p {
   flex: 1;
 }
 .socials {
-  margin-top: 10vh;
+  margin-top: 7vh;
   align-items: center;
   justify-content: center;
   display: flex;
