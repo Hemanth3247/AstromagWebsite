@@ -99,7 +99,8 @@ function App() {
                 astromagno = {item.AstromagNo}
                 date = {item.Date}
                 topic = {item.Topic}
-                title = {item.title} />
+                title = {item.title}
+                link = {item.link} />
             )
             )};
 

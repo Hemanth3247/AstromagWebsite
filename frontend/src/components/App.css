@@ -96,6 +96,14 @@ h1, h2 {
   color: white
 }
 
+.maglink, .maglink:hover, .maglink:active, .maglink:visited {
+  all: inherit;
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+  display: contents;
+  position: inherit;
+}
 
 
 .header {
@@ -237,8 +245,8 @@ h1, h2 {
 .magcard:hover {
   transform: scale(1.1);
   transition: all 0.3s ease-out;
+  box-shadow: 0 0 15px rgb(43, 128, 255);
   cursor: pointer;
-  box-shadow: 0 0 10px black;
 }
 
 .magimg {
@@ -299,7 +307,7 @@ p {
   background-position: center;
   background-size: cover;
   margin: 0;
-  min-height: 80vh;
+  min-height: 35vh;
   font-weight: 500;
   font-size: 35px;
   text-align: center;
@@ -310,7 +318,7 @@ p {
 .foothead {
   display: flex;
   flex-direction: row;
-  height: 40vh;
+  height: 25vh;
   margin-left: 10vw;
   margin-right: 10vw;
   align-items: end;
@@ -395,3 +403,5 @@ img.socials {
   text-align: center;
   font-size: medium;
 }
+
+

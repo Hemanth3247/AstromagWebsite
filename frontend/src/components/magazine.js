@@ -6,6 +6,7 @@ export const magazinecard = [
         Date: 2021,
         Topic: "Secret's of Space",
         title: "Space Exploration",
+        link: "http://localhost:3000/pdf/Astromag 1"
         
     },
     {
@@ -15,6 +16,8 @@ export const magazinecard = [
         Date: 2022,
         Topic: "Cosmic Contradictions",
         title: "Paradoxes",
+        link: "http://localhost:3000/pdf/Astromag 2"
+
         
     },
     {
@@ -24,7 +27,9 @@ export const magazinecard = [
         Date: 2023,
         Topic: "The Big Bang Theory",
         title: "Origin of Universe",
-        
+        link: "http://localhost:3000/pdf/Astromag 3"
+
+
     },
     {
         id:4,
@@ -33,7 +38,9 @@ export const magazinecard = [
         Date: 2023,
         Topic: "Infinity",
         title: "Time Travel",
-        
+        link: "http://localhost:3000/pdf/Astromag 4"
+
+
     },
     {
         id:5,
@@ -42,6 +49,8 @@ export const magazinecard = [
         Date: 2024,
         Topic: "Singularity",
         title: "Black Holes",
+        link: "http://localhost:3000/pdf/Astromag 5"
+
         
     },
     {
@@ -51,6 +60,8 @@ export const magazinecard = [
         Date: 2024,
         Topic: "Star Life",
         title: "Life of Stars",
+        link: "http://localhost:3000/pdf/Astromag 6"
+
         
     },
     {
@@ -59,7 +70,8 @@ export const magazinecard = [
         AstromagNo: 7,
         Date: 2025,
         Topic: "Aien Life",
-        title: "ALien Worlds",
+        title: "Alien Worlds",
+        link: "http://localhost:3000/pdf/Astromag 7"
         
     },
     {
@@ -69,7 +81,9 @@ export const magazinecard = [
         Date: 2025,
         Topic: "Space Tech",
         title: "Technauts",
-        
+        link: "http://localhost:3000/pdf/Astromag 8 VOL 1"
+
+
     },
     {
         id:9,
@@ -78,6 +92,8 @@ export const magazinecard = [
         Date: 2026,
         Topic: "Space Tech",
         title: "Technauts",
+        link: "http://localhost:3000/pdf/Astromag 8 VOL 2"
+
         
     },
     {
@@ -87,6 +103,7 @@ export const magazinecard = [
         Date: 2026,
         Topic: "Coming Soon",
         title: "Coming Soon",
+
         
     }
 ]
