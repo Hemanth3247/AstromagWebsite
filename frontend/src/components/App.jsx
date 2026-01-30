@@ -30,10 +30,14 @@ function App() {
 
   const [scrollPosition, setScrollPosition] = useState(0);
   const containerRef = useRef(null);
-  const SCROLL = 650;
+
+  const SCROLL = window.innerWidth < 768 ?Math.round(window.innerWidth*0.73) : 650; 
+  const extra = window.innerWidth > 768 ? 500 : -400;
 
   const handScroll = (scrolled) => {
-    if (scrollPosition + scrolled < 0 || scrollPosition + scrolled > containerRef.current.scrollWidth + 500 - containerRef.current.clientWidth) {
+
+    const maxScroll = containerRef.current.scrollWidth + extra - containerRef.current.clientWidth;
+    if (scrollPosition + scrolled < 0 || scrollPosition + scrolled > maxScroll) {
       return;
     }
     const newScrollPosition = scrollPosition + scrolled;
@@ -42,6 +46,10 @@ function App() {
 
     containerRef.current.scrollTo({left: newScrollPosition, behavior: 'smooth'});
   }
+
+  const para1 = "A student-led platform on space technology, astronomy, and astrophysics by Zenith Club, IIT Ropar";
+  const para2 = "A platform by the Zenith Club of IIT Ropar dedicated to space technology, astronomy, and astrophysics, featuring magazines, articles, and explorations that reflect curiosity, research, and student perspectives on the universe";
+  const intro = window.innerWidth < 768 ? para1 : para2;
 
   return(
     <>
@@ -62,7 +70,6 @@ function App() {
       </div>
 
 
-
       <div className="Content">
         <div className="intropage">
           <img className="contentlogo" src={logo[0] } />
@@ -71,10 +78,7 @@ function App() {
               Welcome to Astromag
             </h1>
             <h2 className='intropara'>
-            A platform by the Zenith Club of IIT Ropar dedicated 
-            to space technology, astronomy, and astrophysics, featuring 
-            magazines, articles, and explorations that reflect curiosity, research, and 
-            student perspectives on the universe.
+              {intro}
             </h2>
           </div>
           <button onClick={handleGetStarted} className='start'>Get Started</button>
@@ -102,7 +106,7 @@ function App() {
                 title = {item.title}
                 link = {item.link} />
             )
-            )};
+            )}
 
           </div>
         </div>
@@ -110,11 +114,11 @@ function App() {
       <div className="footer">
         <div className="foothead">
           <div ref={contactRef} className="contact">
-            <div><p style={{minHeight: '14vh'}}>Contact Us</p></div>
+            <div className='contactus'><p>Contact Us</p></div>
             <div className="mail">
               <p>For any queries contact us at:</p>
               <div className="mailid">
-                <img src={socialmedia[0]} style={{width:'4vh'}} />
+                <img src={socialmedia[0]}/>
                 <a href="mailto:zenithclub@iitrpr.ac.in" className='maillink'>zenithclub@iitrpr.ac.in</a>
               </div>
             </div>

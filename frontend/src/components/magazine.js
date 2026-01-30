@@ -103,7 +103,7 @@ export const magazinecard = [
         Date: 2026,
         Topic: "Coming Soon",
         title: "Coming Soon",
-
+        link: "http://localhost:3000/pdf/Astromag 9"
         
     }
 ]
