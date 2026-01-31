@@ -6,7 +6,7 @@ export const magazinecard = [
         Date: 2021,
         Topic: "Secret's of Space",
         title: "Space Exploration",
-        link: "http://localhost:3000/pdf/Astromag 1"
+        link: "AstroMag 1"
         
     },
     {
@@ -16,7 +16,7 @@ export const magazinecard = [
         Date: 2022,
         Topic: "Cosmic Contradictions",
         title: "Paradoxes",
-        link: "http://localhost:3000/pdf/Astromag 2"
+        link: "AstroMag 2"
 
         
     },
@@ -27,7 +27,7 @@ export const magazinecard = [
         Date: 2023,
         Topic: "The Big Bang Theory",
         title: "Origin of Universe",
-        link: "http://localhost:3000/pdf/Astromag 3"
+        link: "AstroMag 3"
 
 
     },
@@ -38,7 +38,7 @@ export const magazinecard = [
         Date: 2023,
         Topic: "Infinity",
         title: "Time Travel",
-        link: "http://localhost:3000/pdf/Astromag 4"
+        link: "AstroMag 4"
 
 
     },
@@ -49,7 +49,7 @@ export const magazinecard = [
         Date: 2024,
         Topic: "Singularity",
         title: "Black Holes",
-        link: "http://localhost:3000/pdf/Astromag 5"
+        link: "AstroMag 5"
 
         
     },
@@ -60,7 +60,7 @@ export const magazinecard = [
         Date: 2024,
         Topic: "Star Life",
         title: "Life of Stars",
-        link: "http://localhost:3000/pdf/Astromag 6"
+        link: "Astromag 6"
 
         
     },
@@ -71,7 +71,7 @@ export const magazinecard = [
         Date: 2025,
         Topic: "Aien Life",
         title: "Alien Worlds",
-        link: "http://localhost:3000/pdf/Astromag 7"
+        link: "Astromag 7"
         
     },
     {
@@ -81,7 +81,7 @@ export const magazinecard = [
         Date: 2025,
         Topic: "Space Tech",
         title: "Technauts",
-        link: "http://localhost:3000/pdf/Astromag 8 VOL 1"
+        link: "Astromag 8 VOL 1"
 
 
     },
@@ -92,7 +92,7 @@ export const magazinecard = [
         Date: 2026,
         Topic: "Space Tech",
         title: "Technauts",
-        link: "http://localhost:3000/pdf/Astromag 8 VOL 2"
+        link: "AstroMag 8 VOL 2"
 
         
     },
@@ -103,7 +103,7 @@ export const magazinecard = [
         Date: 2026,
         Topic: "Coming Soon",
         title: "Coming Soon",
-        link: "http://localhost:3000/pdf/Astromag 9"
+        link: "Astromag 9"
         
     }
 ]
