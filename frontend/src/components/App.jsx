@@ -60,10 +60,10 @@ function App() {
         </div>
         <nav style={{flex: 0.7}}>
           <div className="navBar">
-            <a href="/">Home</a>
+            <a style={{color:'white', textDecoration:'none'}} href="/">Home</a>
             <a onClick={handleGetStarted}>Magazines</a>
             <a>Articles</a>
-            <a target="_blank" href="https://iitrpr.ac.in/bost/zenith">About</a>
+            <a style={{textDecoration:'none',color:'white'}} target="_blank" href="https://iitrpr.ac.in/bost/zenith">About</a>
             <a onClick={getContact} >Contact</a>
           </div>
         </nav>
