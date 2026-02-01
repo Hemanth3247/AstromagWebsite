@@ -60,7 +60,7 @@ export const magazinecard = [
         Date: 2024,
         Topic: "Star Life",
         title: "Life of Stars",
-        link: "Astromag 6"
+        link: "AstroMag 6"
 
         
     },
@@ -71,7 +71,7 @@ export const magazinecard = [
         Date: 2025,
         Topic: "Aien Life",
         title: "Alien Worlds",
-        link: "Astromag 7"
+        link: "AstroMag 7"
         
     },
     {
@@ -81,7 +81,7 @@ export const magazinecard = [
         Date: 2025,
         Topic: "Space Tech",
         title: "Technauts",
-        link: "Astromag 8 VOL 1"
+        link: "AstroMag 8 VOL 1"
 
 
     },
@@ -101,9 +101,9 @@ export const magazinecard = [
         magazineno: 9,
         AstromagNo: 9,
         Date: 2026,
-        Topic: "Coming Soon",
-        title: "Coming Soon",
-        link: "Astromag 9"
+        Topic: "Life and Death in Space",
+        title: "Void To Vitae",
+        link: "AstroMag 9"
         
     }
 ]
