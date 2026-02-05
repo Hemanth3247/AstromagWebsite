@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import { magazines, logo, socialmedia, arrow } from '../assets/images.js'
 import { magazinecard } from './magazine.js'
 import MagCard from './magazinecard.jsx'
@@ -14,6 +14,17 @@ export function NavBar() {
 }
 
 function App() {
+
+  const callserver = async ()  => {
+    fetch("https://astromag.onrender.com/start");
+  } 
+
+  useEffect(() => {
+    callserver();
+  }, []
+  );
+
+
   const sectionRef = useRef(null);
   const handleGetStarted = () => {
   sectionRef.current.scrollIntoView({

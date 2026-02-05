@@ -24,6 +24,10 @@ app.get("/pdf/:name", (req, res) => {
   res.sendFile(filePath);
 });
 
+app.get("/start", (req, res) => {
+  return res.status(200).json({ message: "Server is running" });
+});
+
 app.listen(PORT, () => {
   console.log(`PDF server running on http://localhost:${PORT}`);
 });
