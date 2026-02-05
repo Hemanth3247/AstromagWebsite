@@ -2,7 +2,7 @@ export default function MagCard({ magazineno, astromagno, date, topic, title, li
     return(
         <>
             <div className="magcard">
-                <a className="maglink" target="_blank" href={"https://astromag.onrender.com/pdf/"+link}>
+                <a className="maglink" target="_blank" href={"https://astromagwebsite-5im8.onrender.com/pdf/"+link}>
                 <img className='magimg' src={magazineno} />
                 <div className="magdet">
                 <h1>{'Astromag '+ astromagno}</h1>

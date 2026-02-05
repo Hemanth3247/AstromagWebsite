@@ -16,7 +16,9 @@ export function NavBar() {
 function App() {
 
   const callserver = async ()  => {
-    fetch("https://astromag.onrender.com/start");
+    const callserver = await fetch("https://astromagwebsite-5im8.onrender.com/start");
+    const data = await callserver.json();
+    console.log(data);
   } 
 
   useEffect(() => {
