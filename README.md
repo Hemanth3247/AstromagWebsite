@@ -2,10 +2,6 @@
 
 > An interactive web platform showcasing the wonders of astronomy and space exploration.
 
-![JavaScript](https://img.shields.io/badge/JavaScript-44.6%25-F7DF1E?style=flat-square)
-![CSS](https://img.shields.io/badge/CSS-54%25-1572B6?style=flat-square)
-![HTML](https://img.shields.io/badge/HTML-1.4%25-E34C26?style=flat-square)
-
 ## ✨ Features
 
 - 🎨 **Beautiful UI** - Responsive design with modern CSS styling
