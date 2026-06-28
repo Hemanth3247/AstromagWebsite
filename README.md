@@ -1,4 +1,6 @@
-# 🚀 Astromag Website <small>[Visit the website](https://www.astromag.space)</small>
+# 🚀 Astromag Website 
+
+[Visit the website](https://www.astromag.space)
 
 > An interactive web platform showcasing the wonders of astronomy and space exploration.
 
