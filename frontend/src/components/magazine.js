@@ -105,5 +105,14 @@ export const magazinecard = [
         title: "Void To Vitae",
         link: "AstroMag 9"
         
+    },
+    {
+	id:10,
+	magazineno: 10,
+	AstromagNo: 10,
+	Date: 2026,
+	Topic: "Space Philosophy",
+	title: "Cosmos",
+	link: "Astromag 10"
     }
 ]

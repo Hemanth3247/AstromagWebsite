@@ -9,6 +9,7 @@ import astro7 from '../assets/astromags/astro7.jpg'
 import astro8v1 from '../assets/astromags/astro8v1.jpg'
 import astro8v2 from '../assets/astromags/astro8v2.jpg'
 import astro9 from '../assets/astromags/astro9.png'
+import astro10 from '../assets/astromags/astro10.jpg'
 import astromaglogo from '../assets/logo/AstromagLogo.jpg'
 import mail from '../assets/icons/mail.svg'
 import instagram from '../assets/icons/instagram.jpg'
@@ -18,7 +19,7 @@ import leftarrow from '../assets/icons/leftarrow.svg'
 import rightarrow from '../assets/icons/rightarrow.svg'
 
 
-export const magazines = [ astro1, astro2, astro3, astro4, astro5, astro6, astro7, astro8v1, astro8v2, astro9 ]
+export const magazines = [ astro1, astro2, astro3, astro4, astro5, astro6, astro7, astro8v1, astro8v2, astro9, astro10 ]
 
 export const logo = [ zenithlogo, astromaglogo ]
 
