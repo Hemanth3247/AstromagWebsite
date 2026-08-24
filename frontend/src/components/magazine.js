@@ -113,6 +113,6 @@ export const magazinecard = [
 	Date: 2026,
 	Topic: "Space Philosophy",
 	title: "Cosmos",
-	link: "Astromag 10"
+	link: "AstroMag 10"
     }
 ]
